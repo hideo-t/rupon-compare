@@ -1,0 +1,4 @@
+# 確認フェーズ中は検索エンジンのインデックスを拒否
+# 正式公開時に Disallow: / を Allow: / に変更すること
+User-agent: *
+Disallow: /

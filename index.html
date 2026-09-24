@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Café Le Pont（るぽん）｜コンセプト比較 — A案 / B案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/logo-180.png">
+<style>
+  :root{
+    --ink:#152232; --ink-soft:#4a5a6a; --muted:#8a97a4;
+    --cream:#f6f1ea; --paper:#fbf8f3; --line:#e4ddd2;
+    --gold:#a9853f; --gold-soft:#c6a86a; --a:#2c6e73; --b:#c2612f;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:"Noto Sans JP",sans-serif; line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ width:min(100% - 2.4rem, 1040px); margin-inline:auto; }
+  header.top{
+    text-align:center; padding:clamp(2.4rem,6vw,4rem) 0 clamp(1.4rem,3vw,2rem);
+  }
+  header.top img{ width:96px; height:auto; opacity:.95; }
+  .eyebrow{
+    font-family:"Cormorant Garamond",serif; letter-spacing:.34em;
+    text-transform:uppercase; font-size:.82rem; color:var(--gold);
+    margin:.9rem 0 .3rem;
+  }
+  h1{
+    font-family:"Noto Serif JP",serif; font-weight:500;
+    font-size:clamp(1.35rem,3.4vw,1.9rem); margin:.2rem 0 .6rem; letter-spacing:.04em;
+  }
+  .lead{
+    max-width:34rem; margin:0 auto; color:var(--ink-soft);
+    font-size:.96rem;
+  }
+  .grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(1rem,2.4vw,1.8rem);
+    padding:clamp(1.4rem,4vw,2.6rem) 0 clamp(3rem,7vw,5rem);
+  }
+  @media (max-width:720px){ .grid{ grid-template-columns:1fr; } }
+  .card{
+    background:var(--paper); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; display:flex; flex-direction:column;
+    box-shadow:0 10px 30px rgba(21,34,50,.05);
+    transition:transform .25s, box-shadow .25s;
+  }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 16px 40px rgba(21,34,50,.10); }
+  .card .thumb{ position:relative; aspect-ratio:4/3; overflow:hidden; background:#ddd; }
+  .card .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .tag{
+    position:absolute; top:12px; left:12px; z-index:2;
+    font-family:"Cormorant Garamond",serif; font-size:.78rem; letter-spacing:.18em;
+    color:#fff; padding:.3rem .8rem; border-radius:999px; backdrop-filter:blur(2px);
+  }
+  .tag.a{ background:rgba(44,110,115,.92); }
+  .tag.b{ background:rgba(194,97,47,.92); }
+  .card .body{ padding:clamp(1.3rem,3vw,1.8rem); display:flex; flex-direction:column; flex:1; }
+  .card h2{
+    font-family:"Noto Serif JP",serif; font-weight:500; font-size:1.16rem;
+    margin:0 0 .2rem; letter-spacing:.03em;
+  }
+  .card .sub{ font-size:.8rem; color:var(--muted); margin:0 0 .9rem; letter-spacing:.04em; }
+  .card ul{ list-style:none; margin:0 0 1.3rem; padding:0; font-size:.88rem; color:var(--ink-soft); }
+  .card li{ padding:.28rem 0 .28rem 1.3rem; position:relative; }
+  .card li::before{ content:"—"; position:absolute; left:0; color:var(--gold); }
+  .btn{
+    margin-top:auto; display:inline-block; text-align:center; text-decoration:none;
+    padding:.85rem 1rem; border-radius:10px; font-size:.92rem; letter-spacing:.06em;
+    color:#fff; transition:opacity .2s;
+  }
+  .btn:hover{ opacity:.9; }
+  .btn.a{ background:var(--a); }
+  .btn.b{ background:var(--b); }
+  .note{
+    text-align:center; color:var(--muted); font-size:.8rem;
+    padding-bottom:3rem; line-height:2;
+  }
+  .note code{ background:#fff; border:1px solid var(--line); border-radius:5px; padding:.1rem .45rem; font-size:.86em; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <img src="assets/img/logo.png" alt="Café Le Pont（るぽん）">
+    <p class="eyebrow">Concept Comparison</p>
+    <h1>Café Le Pont（るぽん）— 2つのコンセプト案</h1>
+    <p class="lead">
+      同じお店を、2つの方向で組み立てました。<br>
+      サムネイルまたはボタンから、それぞれのサイトをご覧いただけます。見比べて、進める方をお選びください。
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+
+    <!-- A案 -->
+    <article class="card">
+      <a class="thumb" href="seiro.html" aria-label="A案を見る">
+        <span class="tag a">Plan A</span>
+        <img src="assets/img/photos/menu-seiro.jpg" alt="蒸籠に盛られたパンと蒸し野菜のせいろ蒸しセット">
+      </a>
+      <div class="body">
+        <h2>せいろ蒸し × 健康</h2>
+        <p class="sub">大人の、街の架け橋カフェ</p>
+        <ul>
+          <li>地元野菜のせいろ蒸しを看板に</li>
+          <li>落ち着いた大人向けの世界観</li>
+          <li>夜営業あり（日本酒・ワイン）</li>
+          <li>「体にやさしい」を前面に</li>
+        </ul>
+        <a class="btn a" href="seiro.html">A案サイトを見る →</a>
+      </div>
+    </article>
+
+    <!-- B案 -->
+    <article class="card">
+      <a class="thumb" href="family.html" aria-label="B案を見る">
+        <span class="tag b">Plan B</span>
+        <img src="assets/img/photos/lepon-curry.jpg" alt="ひよこの形のライスがのった、子ども向けのひよこカレー">
+      </a>
+      <div class="body">
+        <h2>家族で楽しむフランス食堂</h2>
+        <p class="sub">こどもも、おとなも、うれしい</p>
+        <ul>
+          <li>看板は「ひよこカレー」（撮影写真）</li>
+          <li>フライドポテトはファミリーサイズ</li>
+          <li>ごほうびフレンチトースト</li>
+          <li>ランチのみ・夜営業なし</li>
+        </ul>
+        <a class="btn b" href="family.html">B案サイトを見る →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="note">
+    ファイル： <code>index.html</code>（この比較ページ）／ <code>seiro.html</code>（A案）／ <code>family.html</code>（B案）<br>
+    保存先： <code>C:\Users\hidex\rupon-lp\</code> ・ 公開はしていません（noindex）
+  </p>
+</main>
+
+</body>
+</html>
