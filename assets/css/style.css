@@ -542,3 +542,41 @@ a{ color:var(--gold); }
   *,*::before,*::after{ transition:none !important; animation:none !important; }
   .menu-item:hover,.btn:hover{ transform:none; }
 }
+
+/* ============ mobile optimization ============ */
+html{ -webkit-text-size-adjust:100%; }
+body{ overflow-x:hidden; }
+img, video{ max-width:100%; }
+
+@media (max-width:700px){
+  .hero{ padding-top:clamp(2.2rem,7vw,3.2rem); }
+  .hero-actions{ gap:.7rem; }
+  .btn{ min-height:48px; display:inline-flex; align-items:center; justify-content:center; }
+  .nav-cta{ min-height:42px; display:inline-flex; align-items:center; }
+  body{ padding-bottom:64px; }            /* 下部コールバー分 */
+}
+@media (max-width:560px){
+  .hero-actions{ flex-direction:column; align-items:stretch; }
+  .hero-actions .btn{ width:100%; }
+  .section{ padding:clamp(2.6rem,8vw,4rem) 0; }
+  .menu-badge{ font-size:.62rem; }
+}
+
+/* mobile sticky call bar */
+.mobile-callbar{ display:none; }
+@media (max-width:700px){
+  .mobile-callbar{
+    display:flex; position:fixed; left:0; right:0; bottom:0; z-index:200;
+    background:rgba(250,246,239,.96); backdrop-filter:blur(10px);
+    border-top:1px solid var(--line); box-shadow:0 -4px 18px rgba(21,34,50,.10);
+    padding-bottom:env(safe-area-inset-bottom);   /* iPhoneのホームバー回避 */
+  }
+  .mobile-callbar a{
+    flex:1; display:flex; align-items:center; justify-content:center; gap:.5em;
+    padding:.9rem .5rem; min-height:56px; text-decoration:none;
+    font-size:.9rem; letter-spacing:.06em;
+  }
+  .mobile-callbar .mc-tel{ background:var(--navy); color:var(--cream); font-weight:500; }
+  .mobile-callbar .mc-ig{ color:var(--ink); }
+  .mobile-callbar svg{ width:18px; height:18px; flex:none; }
+}
