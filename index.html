@@ -13,7 +13,7 @@
   :root{
     --ink:#152232; --ink-soft:#4a5a6a; --muted:#8a97a4;
     --cream:#f6f1ea; --paper:#fbf8f3; --line:#e4ddd2;
-    --gold:#a9853f; --gold-soft:#c6a86a; --a:#2c6e73; --b:#c2612f;
+    --gold:#a9853f; --gold-soft:#c6a86a; --a:#2c6e73; --b:#c2612f; --c:#000080;
   }
   *{box-sizing:border-box;}
   body{
@@ -40,7 +40,7 @@
     font-size:.96rem;
   }
   .grid{
-    display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(1rem,2.4vw,1.8rem);
+    display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(1rem,2.4vw,1.8rem);
     padding:clamp(1.4rem,4vw,2.6rem) 0 clamp(3rem,7vw,5rem);
   }
   @media (max-width:720px){ .grid{ grid-template-columns:1fr; } }
@@ -59,7 +59,7 @@
     color:#fff; padding:.3rem .8rem; border-radius:999px; backdrop-filter:blur(2px);
   }
   .tag.a{ background:rgba(44,110,115,.92); }
-  .tag.b{ background:rgba(194,97,47,.92); }
+  .tag.b{ background:rgba(194,97,47,.92); } .tag.c{background:#000080}.btn.c{background:#000080}
   .card .body{ padding:clamp(1.3rem,3vw,1.8rem); display:flex; flex-direction:column; flex:1; }
   .card h2{
     font-family:"Noto Serif JP",serif; font-weight:500; font-size:1.16rem;
@@ -90,9 +90,9 @@
   <div class="wrap">
     <img src="assets/img/logo.png" alt="Café Le Pont（るぽん）">
     <p class="eyebrow">Concept Comparison</p>
-    <h1>Café Le Pont（るぽん）— 2つのコンセプト案</h1>
+    <h1>Café Le Pont（るぽん）— 3つのコンセプト案</h1>
     <p class="lead">
-      同じお店を、2つの方向で組み立てました。<br>
+      同じお店を、3つの方向で組み立てました。<br>
       サムネイルまたはボタンから、それぞれのサイトをご覧いただけます。見比べて、進める方をお選びください。
     </p>
   </div>
@@ -139,10 +139,24 @@
       </div>
     </article>
 
+    <!-- C案 -->
+    <article class="card">
+      <a class="thumb" href="retro.html" aria-label="C案を見る">
+        <span class="tag c">Plan C</span>
+        <img src="assets/photos/exterior/exterior-01.jpg" alt="カフェるぽん外観">
+      </a>
+      <div class="body">
+        <h2>親不孝橋 × インターネット黎明期</h2>
+        <p class="sub">本人は至って真面目です</p>
+        <ul><li>Windows95・IE推奨の公式ホームページ</li><li>キリ番・BBS・工事中・管理人の部屋</li><li>親不孝橋と向新蔵の歴史を異様に詳しく紹介</li><li>実際の料理・店内写真を小さなサムネイルで掲載</li></ul>
+        <a class="btn c" href="retro.html">C案サイトを見る →</a>
+      </div>
+    </article>
+
   </div>
 
   <p class="note">
-    ファイル： <code>index.html</code>（この比較ページ）／ <code>seiro.html</code>（A案）／ <code>family.html</code>（B案）<br>
+    ファイル： <code>index.html</code>（この比較ページ）／ <code>seiro.html</code>（A案）／ <code>family.html</code>（B案）／ <code>retro.html</code>（C案）<br>
     保存先： <code>C:\Users\hidex\rupon-lp\</code> ・ 公開はしていません（noindex）
   </p>
 </main>
