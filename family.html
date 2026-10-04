@@ -556,6 +556,18 @@ window.addEventListener('load',function(){
     a.addEventListener('click',function(){ chk.checked=false; });
   });
 })();
+
+/* ロゴをクリックしたらホーム(先頭)へ戻る（ハッシュもクリア・メニューも閉じる） */
+(function(){
+  var brand=document.querySelector('.brand');
+  if(!brand)return;
+  brand.addEventListener('click',function(ev){
+    ev.preventDefault();
+    var chk=document.getElementById('navchk'); if(chk){ chk.checked=false; }
+    if(location.hash){ try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){} }
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
 </script>
 
 </body>
