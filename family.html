@@ -398,7 +398,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 
       <figure class="menu-clip">
         <video src="assets/video/menu-clip.mp4" poster="assets/video/menu-clip-poster.jpg"
-               autoplay muted loop playsinline preload="metadata" aria-label="せいろ蒸しセットの様子"></video>
+               muted loop playsinline preload="metadata" aria-label="せいろ蒸しセットの様子"></video>
         <figcaption>湯気の立つ、せいろ蒸し。</figcaption>
       </figure>
 
@@ -515,6 +515,25 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
     Instagram
   </a>
 </div>
+
+<script>
+/* メニュー動画: 画面内に入ったら再生（autoplayによる読み込み時スクロール飛びを回避） */
+(function(){
+  var v=document.querySelector('.menu-clip video');
+  if(!v)return;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ v.play().catch(function(){}); }
+        else{ v.pause(); }
+      });
+    },{threshold:0.25});
+    io.observe(v);
+  }else{
+    v.play().catch(function(){});
+  }
+})();
+</script>
 
 </body>
 </html>
