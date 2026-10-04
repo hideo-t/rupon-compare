@@ -525,6 +525,15 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
     v.play().catch(function(){});
   }
 })();
+
+/* モバイル: ナビ項目を選んだらハンバーガーメニューを自動で閉じる */
+(function(){
+  var chk=document.getElementById('navchk');
+  if(!chk)return;
+  document.querySelectorAll('.site-nav a').forEach(function(a){
+    a.addEventListener('click',function(){ chk.checked=false; });
+  });
+})();
 </script>
 
 </body>
