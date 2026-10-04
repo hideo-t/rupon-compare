@@ -224,10 +224,12 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 }
 @media(max-width:640px){
   .section{padding:3.5rem 0}
-  .site-nav{position:fixed;inset:0 0 0 auto;width:min(80vw,300px);background:var(--cream);
-    flex-direction:column;align-items:stretch;padding:5rem 1.5rem 2rem;gap:.2rem;
+  /* backdrop-filter作る含有ブロックを解除しないとfixedパネルがヘッダー内に閉じ込められる */
+  .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--cream)}
+  .site-nav{position:fixed;inset:0 0 0 auto;width:min(82vw,320px);background:var(--cream);
+    flex-direction:column;align-items:stretch;padding:5rem 1.5rem 2rem;gap:.2rem;z-index:110;
     transform:translateX(100%);transition:.3s;box-shadow:-10px 0 40px -20px rgba(0,0,0,.4)}
-  .site-nav a{padding:.9rem .5rem;border-bottom:1px solid var(--line)}
+  .site-nav a{padding:.95rem .6rem;border-bottom:1px solid var(--line);color:var(--grape);font-size:1rem;font-weight:500}
   .nav-cta{flex-direction:row;gap:.5rem;justify-content:center;margin:.8rem 0 0}
   #navchk:checked ~ .header-inner .site-nav{transform:translateX(0)}
   .nav-toggle{display:flex;flex-direction:column;gap:5px;width:30px;cursor:pointer;z-index:120;background:none;border:0;padding:4px}
