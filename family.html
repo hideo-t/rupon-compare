@@ -74,7 +74,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
   backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px;padding:.4rem 0}
 .brand{display:flex;align-items:center;gap:.6rem}
-.brand img{height:46px;width:auto}
+.brand img{height:52px;width:auto}
 .brand b{font-family:var(--serif-en);font-weight:500;font-size:1.15rem;color:var(--grape);letter-spacing:.02em;line-height:1}
 .brand span{display:block;font-size:.66rem;letter-spacing:.3em;color:var(--orchid);margin-top:.2rem}
 .site-nav{display:flex;align-items:center;gap:.3rem}
@@ -235,6 +235,9 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
   .menu-grid{grid-template-columns:1fr}
   .pillars{grid-template-columns:1fr}
   .terrace-bench img{aspect-ratio:4/3}
+  .hero{flex-direction:column;justify-content:center}
+  .hero-inner{padding:3.2rem 1.25rem 2rem}
+  .hero-facts{position:static;margin-top:.5rem}
   .hero-facts>div{min-width:50%}
   .callbar{display:grid}
   .site-footer{padding-bottom:6rem}
@@ -248,12 +251,8 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 <header class="site-header" id="top">
   <input type="checkbox" id="navchk" hidden>
   <div class="wrap header-inner">
-    <a class="brand" href="#top" aria-label="Café Le Pont ホーム">
-      <img src="assets/img/logo-color.png" alt="カフェ るぽん ロゴ">
-      <span class="brand-text">
-        <b>Café Le&nbsp;Pont</b>
-        <span>カフェ るぽん</span>
-      </span>
+    <a class="brand" href="#top" aria-label="Café Le Pont（カフェ るぽん）ホーム">
+      <img src="assets/img/logo-color.png" alt="Café Le Pont（カフェ るぽん）">
     </a>
     <label for="navchk" class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></label>
     <nav class="site-nav" aria-label="メインメニュー">
