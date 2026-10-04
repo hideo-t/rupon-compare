@@ -4,42 +4,265 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Café Le Pont（るぽん）｜福島県白河市 — 家族で楽しむ、ちいさなフランス食堂</title>
-<meta name="description" content="こどももおとなも、うれしい。白河のちいさなフランス食堂 Café Le Pont（るぽん）。看板はひよこカレー、みんなでシェアするファミリーサイズのフライドポテト、ごほうびフレンチトースト。ランチタイム営業。">
+<title>Café Le Pont（カフェ るぽん）｜福島県白河市 — せいろ蒸しが名物の、まちのカフェ</title>
+<meta name="description" content="福島県白河市のちいさなカフェ Café Le Pont（カフェ るぽん）。名物のせいろ蒸し、手ごねチキンバーガー、手づくりスイーツ。赤いベンチとテラスのある、橋がつなぐまちのカフェ。木〜日・祝のランチタイム営業。Uber Eats 対応。">
 <meta property="og:type" content="restaurant">
-<meta property="og:title" content="Café Le Pont（るぽん）｜家族で楽しむフランス食堂">
-<meta property="og:description" content="こどももおとなも、うれしい。白河のちいさなフランス食堂。">
-<meta property="og:image" content="assets/img/photos/lepon-curry.jpg">
+<meta property="og:title" content="Café Le Pont（カフェ るぽん）｜福島県白河市">
+<meta property="og:description" content="せいろ蒸しが名物の、まちのちいさなカフェ。赤いベンチとテラスでお待ちしています。">
+<meta property="og:image" content="assets/img/store/store-exterior-front.jpg">
 <meta property="og:locale" content="ja_JP">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/img/logo-180.png">
 <link rel="apple-touch-icon" href="assets/img/logo-180.png">
+<style>
+/* ===== Café Le Pont — real-photo rebuild ===== */
+:root{
+  --grape:#4E1D3C;      /* deep aubergine (dark sections / text accents) */
+  --plum:#7C2E63;       /* brand purple */
+  --orchid:#B45C97;     /* signboard orchid */
+  --pink:#E6197F;       /* bridge rail accent */
+  --wood:#A06A3E;       /* cedar slat */
+  --red:#D5333B;        /* red bench pop */
+  --cream:#FBF7F1;
+  --paper:#F4ECE2;
+  --sand:#EADFD0;
+  --ink:#2D2530;
+  --ink-soft:#5C5260;
+  --muted:#9A8FA0;
+  --line:#E4D8CB;
+  --serif-en:"Cormorant Garamond","Times New Roman",serif;
+  --serif-ja:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --wrap:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:var(--sans);font-weight:400;line-height:1.85;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img,video{max-width:100%;display:block}
+a{color:var(--plum);text-decoration:none}
+h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
+.wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
+.narrow{max-width:760px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;background:var(--grape);color:#fff;padding:.6rem 1rem;border-radius:6px;z-index:999}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:.5rem;justify-content:center;
+  padding:.85rem 1.6rem;border-radius:999px;font-weight:500;font-size:.95rem;
+  border:1.5px solid transparent;transition:.25s;cursor:pointer}
+.btn-fill{background:var(--plum);color:#fff;border-color:var(--plum)}
+.btn-fill:hover{background:var(--grape);border-color:var(--grape)}
+.btn-light{background:#fff;color:var(--plum);border-color:#fff}
+.btn-light:hover{background:var(--cream)}
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-ghost{background:transparent;color:var(--plum);border-color:var(--orchid)}
+.btn-ghost:hover{background:var(--plum);color:#fff;border-color:var(--plum)}
+
+/* ---- bridge divider ---- */
+.bridge{display:block;margin:0 auto;color:var(--orchid)}
+
+/* ---- header ---- */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(251,247,241,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px;padding:.4rem 0}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand img{height:46px;width:auto}
+.brand b{font-family:var(--serif-en);font-weight:500;font-size:1.15rem;color:var(--grape);letter-spacing:.02em;line-height:1}
+.brand span{display:block;font-size:.66rem;letter-spacing:.3em;color:var(--orchid);margin-top:.2rem}
+.site-nav{display:flex;align-items:center;gap:.3rem}
+.site-nav a{padding:.5rem .8rem;color:var(--ink-soft);font-size:.9rem;position:relative}
+.site-nav a:not(.nav-cta):hover{color:var(--plum)}
+.site-nav a:not(.nav-cta)::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:.35rem;height:1.5px;background:var(--pink);transform:scaleX(0);transform-origin:left;transition:.25s}
+.site-nav a:not(.nav-cta):hover::after{transform:scaleX(1)}
+.nav-cta{display:flex;flex-direction:column;align-items:center;background:var(--plum);color:#fff!important;
+  padding:.45rem 1rem;border-radius:999px;margin-left:.4rem;line-height:1.15}
+.nav-cta:hover{background:var(--grape)}
+.nav-cta b{font-size:.95rem;font-weight:700;letter-spacing:.02em}
+.nav-cta small{font-size:.6rem;letter-spacing:.2em;opacity:.85}
+.nav-toggle{display:none}
+
+/* ---- hero ---- */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(40,16,32,.55) 0%,rgba(62,20,48,.45) 45%,rgba(40,16,32,.72) 100%)}
+.hero-inner{position:relative;z-index:2;padding:5rem 1.25rem}
+.hero-kicker{font-size:.95rem;letter-spacing:.14em;margin:0 0 1.6rem;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.hero-kicker span{display:inline-block;margin-top:.3rem;font-size:1.05rem}
+.hero-logo{margin:0 auto;max-width:min(520px,80vw)}
+.hero-logo img{filter:drop-shadow(0 4px 18px rgba(0,0,0,.35))}
+.hero-depuis{font-family:var(--serif-en);letter-spacing:.35em;font-size:.8rem;margin:1.6rem 0 1rem;display:flex;gap:1rem;align-items:center;justify-content:center;opacity:.9}
+.hero-depuis::before,.hero-depuis::after{content:"";width:40px;height:1px;background:rgba(255,255,255,.6)}
+.hero-fr{font-family:var(--serif-en);font-style:italic;font-size:1.15rem;margin:.2rem 0 .1rem;opacity:.95}
+.hero-ja{font-family:var(--serif-ja);font-size:.95rem;margin:.1rem 0 2rem;opacity:.92}
+.hero-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.hero-facts{position:absolute;z-index:2;left:0;right:0;bottom:0;margin:0;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:0;
+  background:rgba(40,14,30,.55);backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.14)}
+.hero-facts>div{flex:1 1 auto;min-width:150px;padding:.9rem 1.2rem;text-align:center;border-left:1px solid rgba(255,255,255,.12)}
+.hero-facts>div:first-child{border-left:none}
+.hero-facts dt{font-size:.62rem;letter-spacing:.24em;color:var(--orchid);text-transform:uppercase}
+.hero-facts dd{margin:.25rem 0 0;font-size:.9rem;color:#fff}
+
+/* ---- section scaffolding ---- */
+.section{padding:5.5rem 0}
+.section-head{text-align:center;margin-bottom:3rem}
+.section-label{font-family:var(--serif-en);letter-spacing:.3em;text-transform:uppercase;font-size:.78rem;color:var(--orchid);margin:0 0 .6rem}
+.section-title{font-family:var(--serif-ja);font-size:clamp(1.5rem,4.5vw,2.1rem);color:var(--grape)}
+.section-sub{font-family:var(--serif-en);font-style:italic;color:var(--muted);margin:.4rem 0 0}
+
+/* ---- about ---- */
+.about{background:linear-gradient(180deg,var(--cream),var(--paper))}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.about-text .drop{font-family:var(--serif-ja);font-size:1.25rem;color:var(--plum);margin:0 0 1rem}
+.about-text p{margin:0 0 1rem;color:var(--ink-soft)}
+.about-text em{font-family:var(--serif-en);font-style:italic;color:var(--plum)}
+.about-photo{position:relative}
+.about-photo img{border-radius:10px;box-shadow:0 18px 40px -18px rgba(78,29,60,.5);aspect-ratio:4/3;object-fit:cover;width:100%}
+.about-photo figcaption{position:absolute;left:1rem;bottom:1rem;background:rgba(124,46,99,.9);color:#fff;font-size:.72rem;letter-spacing:.1em;padding:.35rem .8rem;border-radius:999px}
+.pillars{list-style:none;margin:3rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.pillars li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.2rem;text-align:center}
+.pillars .ic{width:46px;height:46px;margin:0 auto .8rem;color:var(--plum)}
+.pillars h3{font-size:1rem;color:var(--grape);margin-bottom:.4rem}
+.pillars p{font-size:.84rem;color:var(--ink-soft);margin:0;line-height:1.7}
+
+/* ---- gallery (interior / terrace) ---- */
+.band-interior{background:var(--cream)}
+.band-terrace{background:linear-gradient(180deg,var(--grape),#3a1430);color:#fff}
+.band-terrace .section-title{color:#fff}
+.band-terrace .section-sub{color:var(--orchid)}
+.gal{display:grid;gap:1rem}
+.gal-interior{grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px}
+.gal-interior li{list-style:none;overflow:hidden;border-radius:10px}
+.gal-interior li:first-child{grid-row:span 2;grid-column:span 1}
+.gal-interior img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gal-interior li:hover img{transform:scale(1.05)}
+.terrace-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.terrace-bench{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.terrace-bench img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.terrace-copy p{color:rgba(255,255,255,.85)}
+.terrace-copy .big{font-family:var(--serif-ja);font-size:1.4rem;color:#fff;margin:0 0 1rem}
+.terrace-mini{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.terrace-mini img{border-radius:10px;aspect-ratio:4/3;object-fit:cover}
+
+/* ---- menu ---- */
+.menu{background:var(--paper)}
+.menu-note{text-align:center;color:var(--ink-soft);font-size:.9rem;margin:-1.5rem auto 2.5rem;max-width:620px}
+.menu-signature{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;
+  box-shadow:0 20px 50px -24px rgba(78,29,60,.45);background:#fff;margin-bottom:2.5rem}
+.menu-signature img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.menu-signature .txt{padding:2.5rem;display:flex;flex-direction:column;justify-content:center}
+.menu-signature .tag{font-family:var(--serif-en);font-style:italic;color:var(--pink);margin:0 0 .5rem}
+.menu-signature h3{font-family:var(--serif-ja);font-size:1.6rem;color:var(--grape);margin:0 0 .9rem}
+.menu-signature p{color:var(--ink-soft);margin:0}
+.menu-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.menu-grid li{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line);transition:.3s}
+.menu-grid li:hover{transform:translateY(-4px);box-shadow:0 16px 36px -18px rgba(78,29,60,.4)}
+.menu-grid figure{margin:0;overflow:hidden;aspect-ratio:4/3}
+.menu-grid img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.menu-grid li:hover img{transform:scale(1.06)}
+.menu-grid .body{padding:1.1rem 1.25rem 1.4rem}
+.menu-grid h3{font-size:1.05rem;color:var(--grape);margin-bottom:.35rem}
+.menu-grid p{font-size:.84rem;color:var(--ink-soft);margin:0;line-height:1.7}
+.menu-grid .price{display:inline-block;margin-top:.6rem;font-weight:700;color:var(--plum)}
+.menu-foot{text-align:center;margin-top:2.5rem;color:var(--ink-soft);font-size:.9rem}
+.menu-foot .pills{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.2rem}
+.menu-foot .pills span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;font-size:.82rem;color:var(--ink-soft)}
+
+/* ---- access ---- */
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:stretch}
+.access-photo{border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -20px rgba(78,29,60,.4)}
+.access-photo img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.info-table{width:100%;border-collapse:collapse;margin-bottom:1.5rem}
+.info-table th,.info-table td{text-align:left;padding:.75rem .5rem;border-bottom:1px solid var(--line);font-size:.9rem;vertical-align:top}
+.info-table th{width:7.5em;color:var(--plum);font-weight:500}
+.map{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-top:1.2rem}
+.map iframe{width:100%;height:300px;border:0;display:block}
+
+/* ---- cta ---- */
+.cta{background:linear-gradient(135deg,var(--plum),var(--grape));color:#fff;text-align:center;padding:5rem 0}
+.cta .fr{font-family:var(--serif-en);font-style:italic;color:var(--orchid);margin:0 0 .6rem}
+.cta h2{font-family:var(--serif-ja);font-size:clamp(1.4rem,4vw,1.9rem);margin:0 0 1rem}
+.cta p{color:rgba(255,255,255,.85);margin:0 auto 2rem;max-width:560px}
+
+/* ---- footer ---- */
+.site-footer{background:#2a1020;color:rgba(255,255,255,.7);padding:3rem 0 5.5rem;text-align:center}
+.site-footer img{height:70px;width:auto;margin:0 auto 1rem}
+.footer-nav{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin:1.4rem 0}
+.footer-nav a{color:rgba(255,255,255,.7);font-size:.85rem}
+.footer-nav a:hover{color:#fff}
+.footer-tag{font-family:var(--serif-ja);font-size:.82rem;color:var(--orchid);margin-top:1rem}
+
+/* ---- mobile call bar ---- */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+  grid-template-columns:1fr 1fr;background:#fff;border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;font-size:.9rem;font-weight:500}
+.callbar svg{width:20px;height:20px}
+.callbar .cb-tel{color:var(--plum)}
+.callbar .cb-ig{color:#fff;background:linear-gradient(135deg,var(--plum),var(--pink))}
+
+/* ---- responsive ---- */
+@media(max-width:900px){
+  .about-grid,.terrace-layout,.menu-signature,.access-grid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .gal-interior{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .gal-interior li:first-child{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9}
+  .menu-signature img{min-height:260px}
+}
+@media(max-width:640px){
+  .section{padding:3.5rem 0}
+  .site-nav{position:fixed;inset:0 0 0 auto;width:min(80vw,300px);background:var(--cream);
+    flex-direction:column;align-items:stretch;padding:5rem 1.5rem 2rem;gap:.2rem;
+    transform:translateX(100%);transition:.3s;box-shadow:-10px 0 40px -20px rgba(0,0,0,.4)}
+  .site-nav a{padding:.9rem .5rem;border-bottom:1px solid var(--line)}
+  .nav-cta{flex-direction:row;gap:.5rem;justify-content:center;margin:.8rem 0 0}
+  #navchk:checked ~ .header-inner .site-nav{transform:translateX(0)}
+  .nav-toggle{display:flex;flex-direction:column;gap:5px;width:30px;cursor:pointer;z-index:120;background:none;border:0;padding:4px}
+  .nav-toggle span{height:2px;background:var(--grape);border-radius:2px;transition:.3s}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(2){opacity:0}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .menu-grid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .terrace-bench img{aspect-ratio:4/3}
+  .hero-facts>div{min-width:50%}
+  .callbar{display:grid}
+  .site-footer{padding-bottom:6rem}
+}
+</style>
 </head>
 <body>
 
 <a class="skip" href="#main">本文へスキップ</a>
 
 <header class="site-header" id="top">
+  <input type="checkbox" id="navchk" hidden>
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Café Le Pont ホーム">
-      <img src="assets/img/logo.png" alt="" width="900" height="716" class="brand-logo">
+      <img src="assets/img/logo-color.png" alt="カフェ るぽん ロゴ">
       <span class="brand-text">
-        <strong>Café Le Pont</strong>
-        <em>るぽん &middot; 白河</em>
+        <b>Café Le&nbsp;Pont</b>
+        <span>カフェ るぽん</span>
       </span>
     </a>
+    <label for="navchk" class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></label>
     <nav class="site-nav" aria-label="メインメニュー">
-      <a href="#concept">コンセプト</a>
-      <a href="#promise">お約束</a>
+      <a href="#about">お店について</a>
+      <a href="#interior">店内</a>
+      <a href="#terrace">テラス・ベンチ</a>
       <a href="#menu">メニュー</a>
-      <a href="#info">店舗情報</a>
       <a href="#access">アクセス</a>
-      <a class="nav-cta" href="tel:09042567353">
-        <span class="nav-cta-label">ご予約</span><span class="nav-cta-num">090-4256-7353</span>
-      </a>
+      <a class="nav-cta" href="tel:09042567353"><b>090-4256-7353</b><small>ご予約・お問い合わせ</small></a>
     </nav>
   </div>
 </header>
@@ -48,180 +271,105 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" aria-hidden="true">
-      <source src="assets/video/hero.mp4" type="video/mp4">
-    </video>
-    <div class="hero-veil" aria-hidden="true"></div>
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="wrap hero-inner">
-      <p class="hero-kicker">
-        こどもも、おとなも、うれしい。<br>
-        <span>白河のちいさなフランス食堂</span>
-      </p>
-
-      <h1 class="hero-logo">
-        <img src="assets/img/logo-light.png" alt="Café Le Pont（るぽん）" width="900" height="716">
-      </h1>
-
-      <p class="hero-depuis">
-        <span class="rule" aria-hidden="true"></span>
-        depuis 2024
-        <span class="rule" aria-hidden="true"></span>
-      </p>
-
-      <p class="hero-fr"><em>La table de famille, avec un petit air de France.</em></p>
-      <p class="hero-ja">家族のテーブルに、ちょっとフランスの遊び心を。</p>
-
+    <img class="hero-bg" src="assets/img/store/store-exterior-front.jpg" alt="" aria-hidden="true">
+    <div class="hero-inner">
+      <p class="hero-kicker">橋がつなぐ、まちのカフェ。<br><span>福島県白河市のちいさなお店</span></p>
+      <h1 class="hero-logo"><img src="assets/img/logo-white.png" alt="Café Le Pont（カフェ るぽん）" width="1463" height="938"></h1>
+      <p class="hero-depuis">LE PONT</p>
+      <p class="hero-fr"><em>Un petit pont dans le quartier.</em></p>
+      <p class="hero-ja">赤いベンチと、せいろの湯気と。きょうも、まちのまんなかで。</p>
       <div class="hero-actions">
-        <a class="btn btn-light" href="#menu">看板メニューを見る</a>
+        <a class="btn btn-light" href="#menu">メニューを見る</a>
         <a class="btn btn-outline" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
-
     <dl class="hero-facts">
-      <div><dt>営業</dt><dd>木〜日・祝 11:00–15:00</dd></div>
-      <div><dt>定休</dt><dd>月・火・水</dd></div>
-      <div><dt>席数</dt><dd>18席 / 駐車場8台</dd></div>
-      <div><dt>所在</dt><dd>福島県白河市向新蔵50番地</dd></div>
+      <div><dt>Open</dt><dd>木・金・土・日・祝</dd></div>
+      <div><dt>Hours</dt><dd>11:00 – 15:00</dd></div>
+      <div><dt>Parking</dt><dd>駐車場あり</dd></div>
+      <div><dt>Delivery</dt><dd>Uber Eats 対応</dd></div>
     </dl>
   </section>
 
-  <!-- ============ LEAD ============ -->
-  <section class="lead-band">
-    <div class="wrap narrow">
-      <p class="lead-copy">
-        小さな手も、大きな手も、同じテーブルで。<br class="br-wide">
-        「おいしいね」を、家族みんなで。
-      </p>
-      <div class="bridge-rule" aria-hidden="true">
-        <svg viewBox="0 0 220 46" role="presentation">
-          <path d="M6 40 C 50 10, 170 10, 214 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-          <path d="M6 40 C 50 18, 170 18, 214 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".55"/>
-          <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-            <line x1="6" y1="40" x2="6" y2="46"/><line x1="60" y1="21" x2="60" y2="40"/>
-            <line x1="110" y1="16" x2="110" y2="40"/><line x1="160" y1="21" x2="160" y2="40"/>
-            <line x1="214" y1="40" x2="214" y2="46"/>
-          </g>
-          <g fill="currentColor">
-            <circle cx="6" cy="39" r="2.4"/><circle cx="60" cy="20" r="2.2"/>
-            <circle cx="110" cy="15" r="2.2"/><circle cx="160" cy="20" r="2.2"/>
-            <circle cx="214" cy="39" r="2.4"/>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ GALLERY ============ -->
-  <section class="gallery" aria-label="店舗と料理の様子">
-    <ul class="gallery-grid">
-      <li class="gallery-wide">
-        <img src="assets/img/photos/lepon-curry.jpg" alt="ひよこの形にととのえたライスがのった、子どもに人気のひよこカレー" width="900" height="1200" loading="lazy">
-      </li>
-      <li>
-        <img src="assets/img/photos/lepon-potato.jpg" alt="山盛りのフライドポテトと2種のソース、ファミリーサイズ" width="900" height="1200" loading="lazy">
-      </li>
-      <li>
-        <img src="assets/img/photos/lepon-frenchtoast.jpg" alt="クリームとチョコを重ねた、高く積んだフレンチトースト" width="900" height="1200" loading="lazy">
-      </li>
-      <li>
-        <img src="assets/img/photos/shop-interior-1.jpg" alt="木の天井とカウンター席が続く店内" width="900" height="675" loading="lazy">
-      </li>
-      <li>
-        <img src="assets/img/photos/shop-exterior-1.jpg" alt="カフェるぽんの外観。木の格子と赤いベンチが並ぶ入口" width="900" height="675" loading="lazy">
-      </li>
-    </ul>
-  </section>
-
-  <!-- ============ CONCEPT ============ -->
-  <section class="section concept" id="concept">
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
     <div class="wrap">
-      <header class="section-head">
-        <p class="section-label">Concept</p>
-        <h2 class="section-title">家族で楽しむ、フランス食堂</h2>
-        <p class="section-sub">Le Pont</p>
-      </header>
-
-      <div class="concept-layout">
-        <div class="concept-story">
-          <p class="drop">
-            フランス語で「橋」を意味する&nbsp;<em>le&nbsp;pont</em>。
-          </p>
-          <p>
-            世代と世代をつなぐ橋になりたい。そんな想いから、この店は名づけられました。
-            福島県白河市の、家族で気軽に立ち寄れる、ちいさなフランス食堂です。
-          </p>
-          <p>
-            お皿にはいつも、小さなフランスの国旗を。
-            ひよこの形をしたカレー、みんなで分けあう山盛りのポテト、
-            うずたかく積んだフレンチトースト。見て笑って、食べて笑って。
-          </p>
-          <p>
-            お子さま連れでも、三世代でも、おひとりでも。
-            白河のまんなかで、きょうも家族の「おいしいね」が生まれています。
-          </p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About</p>
+          <h2 class="section-title" style="text-align:left;margin-bottom:1.2rem">橋がつなぐ、まちのカフェ</h2>
+          <p class="drop">フランス語で「橋」を意味する&nbsp;<em>le&nbsp;pont</em>。</p>
+          <p>人と人、世代と世代をつなぐ橋のような場所でありたい。そんな想いを、ピンクの欄干の橋のロゴに込めました。福島県白河市の、気軽に立ち寄れるちいさなカフェです。</p>
+          <p>名物は、ふっくら蒸し上げる<strong>せいろ蒸し</strong>。手ごねのチキンバーガーや、手づくりのスイーツも。明るいランチタイムに、ゆっくりとお過ごしください。</p>
+          <p>店先には、写真を撮りたくなる<strong>赤いベンチ</strong>。晴れた日はテラス席もどうぞ。</p>
         </div>
-
-        <ul class="pillars">
-          <li>
-            <span class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40"><circle cx="14" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="27" cy="16" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 33c0-5 4-8 9-8s9 3 9 8M23 33c0-4 2.5-6.5 6.5-6.5S36 29 36 33" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </span>
-            <div><h3>お子さま、大歓迎</h3><p>ひよこカレーにお子さまも笑顔。ベビーカーのままでも、車椅子のままでもどうぞ。</p></div>
-          </li>
-          <li>
-            <span class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40"><path d="M20 34c7 0 12-5 12-12 0-6-5-10-12-10S8 16 8 22c0 7 5 12 12 12z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 12c0-3 2.5-5.5 5.5-5.5C25 10 23 12 20 12z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 21c2.5 4 9.5 4 12 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            <div><h3>みんなでシェア</h3><p>フライドポテトはファミリーサイズ。取り分けて、わけあって、食卓がにぎやかに。</p></div>
-          </li>
-          <li>
-            <span class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M20 12v8l6 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <div><h3>お昼に、ゆっくり</h3><p>営業はランチタイム。明るい時間に、家族そろって気兼ねなく過ごせます。</p></div>
-          </li>
-          <li>
-            <span class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40"><path d="M5 29 C 15 13, 25 13, 35 29" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><g stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><line x1="5" y1="29" x2="5" y2="34"/><line x1="14" y1="18.5" x2="14" y2="29"/><line x1="20" y1="16.5" x2="20" y2="29"/><line x1="26" y1="18.5" x2="26" y2="29"/><line x1="35" y1="29" x2="35" y2="34"/></g></svg>
-            </span>
-            <div><h3>フランスの遊び心</h3><p>お皿にひとつ、小さな国旗。ちょっと特別な気分になれる、まちのフランス。</p></div>
-          </li>
-        </ul>
+        <figure class="about-photo">
+          <img src="assets/img/store/store-window.jpg" alt="窓ガラスに描かれた Le Pont の白いロゴと、ガラス越しのテラス席" width="1477" height="1108" loading="lazy">
+          <figcaption>窓に咲く、白いロゴ</figcaption>
+        </figure>
       </div>
+
+      <ul class="pillars">
+        <li>
+          <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 27 C 15 11, 25 11, 35 27" stroke-linecap="round"/><g stroke-linecap="round"><line x1="5" y1="27" x2="5" y2="32"/><line x1="14" y1="16" x2="14" y2="27"/><line x1="20" y1="14" x2="20" y2="27"/><line x1="26" y1="16" x2="26" y2="27"/><line x1="35" y1="27" x2="35" y2="32"/></g></svg>
+          <h3>橋のロゴ</h3><p>ピンクの欄干がかわいい、まちのシンボル。</p>
+        </li>
+        <li>
+          <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="20" cy="24" rx="13" ry="5"/><path d="M9 24c0-5 5-9 11-9s11 4 11 9" /><path d="M14 13c0-2 1.5-3.5 3.5-3.5M20 12c0-2 1.5-3.5 3.5-3.5" stroke-linecap="round"/></svg>
+          <h3>名物せいろ蒸し</h3><p>湯気とともに、ふっくら。からだにやさしい一皿。</p>
+        </li>
+        <li>
+          <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="20" width="26" height="12" rx="1.5"/><line x1="7" y1="25" x2="33" y2="25"/><line x1="11" y1="32" x2="11" y2="36" stroke-linecap="round"/><line x1="29" y1="32" x2="29" y2="36" stroke-linecap="round"/><path d="M9 20v-3M31 20v-3" stroke-linecap="round"/></svg>
+          <h3>赤いベンチ</h3><p>ストリングライトの下、写真映えのフォトスポット。</p>
+        </li>
+        <li>
+          <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="13"/><path d="M20 12v8l6 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>お昼にゆっくり</h3><p>木〜日・祝のランチタイム営業。駐車場・Uber Eats も。</p>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- ============ PROMISE ============ -->
-  <section class="section promise" id="promise">
+  <!-- ============ INTERIOR ============ -->
+  <section class="section band-interior" id="interior">
     <div class="wrap">
       <header class="section-head">
-        <p class="section-label">Notre engagement</p>
-        <h2 class="section-title">Le Pont の約束</h2>
+        <p class="section-label">Interior</p>
+        <h2 class="section-title">こぢんまり、あたたかい店内</h2>
+        <p class="section-sub">Un intérieur chaleureux</p>
       </header>
+      <ul class="gal gal-interior">
+        <li><img src="assets/img/store/store-interior-1.jpg" alt="窓際のテーブル席。グレーの椅子にニットのクッション" width="1477" height="1108" loading="lazy"></li>
+        <li><img src="assets/img/store/store-interior-2.jpg" alt="木のテーブルが並ぶ、明るい店内" width="1477" height="1108" loading="lazy"></li>
+        <li><img src="assets/img/store/store-interior-3.jpg" alt="やわらかな光がさしこむ店内の様子" width="1477" height="1108" loading="lazy"></li>
+        <li><img src="assets/img/store/store-interior-4.jpg" alt="ゆったりくつろげる店内の席" width="1477" height="1108" loading="lazy"></li>
+        <li><img src="assets/img/store/store-interior-5.jpg" alt="カウンターまわりの様子" width="1477" height="1108" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
 
-      <ol class="promise-list">
-        <li>
-          <span class="num">01</span>
-          <h3>子どもがよろこぶ、たのしいお料理を。</h3>
-          <p>ひよこの形のカレー、山盛りのポテト、高く積んだフレンチトースト。「わぁ！」の一皿を、いつも。</p>
-        </li>
-        <li>
-          <span class="num">02</span>
-          <h3>手づくりにこだわり、心を込めてご用意します。</h3>
-          <p>パンもスイーツも自家製。ひとつひとつ、店の厨房から生まれています。</p>
-        </li>
-        <li>
-          <span class="num">03</span>
-          <h3>お一人でも、ご家族でも、安心して過ごせる空間に。</h3>
-          <p>カウンター6席とテーブル12席。ベビーカーや車椅子のままご入店いただけます。全席禁煙です。</p>
-        </li>
-        <li>
-          <span class="num">04</span>
-          <h3>地域の笑顔や未来を支える活動を続けていきます。</h3>
-          <p>規格外野菜の活用による食品ロスの削減、そして障がいのある方々とともにつくる厨房。おいしさの先にある役割を果たしていきます。</p>
-        </li>
-      </ol>
+  <!-- ============ TERRACE / RED BENCH ============ -->
+  <section class="section band-terrace" id="terrace">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="section-label">Terrace &amp; Bench</p>
+        <h2 class="section-title">赤いベンチと、テラス</h2>
+        <p class="section-sub">Le banc rouge</p>
+      </header>
+      <div class="terrace-layout">
+        <figure class="terrace-bench">
+          <img src="assets/img/store/store-bench-1.jpg" alt="ウッドの壁とストリングライトを背にした、真っ赤なベンチ" width="1108" height="1477" loading="lazy">
+        </figure>
+        <div class="terrace-copy">
+          <p class="big">「ここで一枚、どうぞ。」</p>
+          <p>ウッドの壁と、連なるストリングライト。その前に置かれた、真っ赤なベンチ。カフェ るぽんの、いちばんの撮影スポットです。</p>
+          <p>晴れた日は、駐車場横のテラス席も。お子さま連れでも、おひとりでも、気兼ねなくお過ごしください。</p>
+          <div class="terrace-mini">
+            <img src="assets/img/store/store-bench-2.jpg" alt="赤いベンチとグリーン" width="1108" height="1477" loading="lazy">
+            <img src="assets/img/store/store-entrance.jpg" alt="ウッド格子の入口とガラス扉" width="1108" height="1477" loading="lazy">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -230,142 +378,54 @@
     <div class="wrap">
       <header class="section-head">
         <p class="section-label">Menu</p>
-        <h2 class="section-title">るぽんの看板メニュー</h2>
-        <p class="section-note">
-          仕入れによって内容が変わります。最新のメニューは
-          <a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram</a> をご覧ください。
-        </p>
+        <h2 class="section-title">るぽんのお食事</h2>
+        <p class="section-sub">À table</p>
       </header>
+      <p class="menu-note">仕入れによって内容が変わります。最新のメニューは <a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram @rupon_208</a> をご覧ください。</p>
 
       <div class="menu-signature">
-        <figure class="menu-signature-photo">
-          <img src="assets/img/photos/lepon-curry.jpg" alt="ひよこの形にととのえたライスをのせた、フランス国旗付きのひよこカレー" width="900" height="1200">
-        </figure>
-        <div class="menu-signature-text">
-          <p class="menu-tag">Signature</p>
-          <h3>ひよこカレー</h3>
-          <p>
-            ふっくらごはんを、まあるいひよこの形に。
-            やさしい甘さのカレーに、彩りの野菜を添えて。
-            お皿には小さなフランスの国旗を立てて。
-            お子さまも、大人も、思わず笑顔になる、るぽんの看板です。
-          </p>
+        <img src="assets/photos/food/food-01.jpg" alt="せいろで蒸し上げたパンと彩り温野菜、ヨーグルトを添えたせいろ蒸しセット" width="1100" height="825" loading="lazy">
+        <div class="txt">
+          <p class="tag">Signature</p>
+          <h3>せいろ蒸しセット</h3>
+          <p>ふっくら蒸したパンと、彩り豊かな温野菜。やさしいスープと、ヨーグルトやデザートを添えて。湯気の立つ蒸籠のまま、あたたかいうちにどうぞ。るぽんの看板メニューです。</p>
         </div>
       </div>
 
       <ul class="menu-grid">
-        <li class="menu-item">
-          <span class="menu-badge">新メニュー</span>
-          <figure><img src="assets/img/photos/menu-seiro.jpg" alt="手ごねハンバーグと彩り野菜のせいろ蒸しセット（イメージ）" width="760" height="570" loading="lazy"></figure>
-          <h3>ハンバーグせいろ蒸しセット</h3>
-          <p>手ごねハンバーグを、彩り野菜とともに蒸籠でふっくら。スープ・ドリンク付きで、大人もしっかり満足。<b>&yen;1,430（税込）</b></p>
+        <li>
+          <figure><img src="assets/photos/food/food-02.jpg" alt="イングリッシュマフィンにチキンパティとチーズをはさんだ手ごねチキンバーガー" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>手ごねチキンバーガー</h3><p>マフィンに、手ごねのチキンパティとチーズ。温野菜とスープを添えて、しっかりランチに。</p></div>
         </li>
-        <li class="menu-item">
-          <figure><img src="assets/img/photos/lepon-potato.jpg" alt="山盛りのフライドポテトと、ケチャップ・マヨの2種ソース" width="760" height="1013" loading="lazy"></figure>
-          <h3>ファミリーサイズ・フライドポテト</h3>
-          <p>みんなで分けあう山盛りポテト。ケチャップとマヨ、2種のソースで。テーブルがにぎやかになる一皿。</p>
+        <li>
+          <figure><img src="assets/photos/food/food-08.jpg" alt="せいろで蒸したトーストと温野菜" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>せいろのトーストセット</h3><p>厚切りトーストを蒸籠でふっくら。温野菜とともに、やさしい口あたりに。</p></div>
         </li>
-        <li class="menu-item">
-          <figure><img src="assets/img/photos/lepon-frenchtoast.jpg" alt="クリームとチョコを重ねて高く積んだフレンチトースト" width="760" height="1013" loading="lazy"></figure>
-          <h3>ごほうびフレンチトースト</h3>
-          <p>厚切りパンをうずたかく積んで、クリームとチョコを添えて。見た目にもうれしい、ごほうびの一皿。</p>
+        <li>
+          <figure><img src="assets/photos/food/food-10.jpg" alt="ソーセージとピーマン入りのナポリタンと温野菜" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>ナポリタン</h3><p>昔ながらの味つけで仕上げる定番パスタ。温野菜とスープのセットで。</p></div>
         </li>
-        <li class="menu-item">
-          <figure><img src="assets/img/photos/menu-burger.jpg" alt="蒸しパンのバンズにパティとチーズをはさんだ自家製ハンバーガー" width="760" height="570" loading="lazy"></figure>
-          <h3>自家製ハンバーガー</h3>
-          <p>ふんわりバンズに、手づくりのパティとチーズ。野菜を添えて、しっかりランチに。</p>
+        <li>
+          <figure><img src="assets/photos/food/food-15.jpg" alt="千切りキャベツを添えたジューシーな唐揚げ" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>唐揚げ</h3><p>外はカリッと、中はジューシー。千切りキャベツを添えた人気の一品。</p></div>
         </li>
-        <li class="menu-item">
-          <figure><img src="assets/img/photos/menu-noodle.jpg" alt="ソーセージとキャベツの入った焼きそば" width="760" height="570" loading="lazy"></figure>
-          <h3>焼きそば・ナポリタン</h3>
-          <p>しっかり食べたい日に。昔ながらの味つけで仕上げる、家族みんなの定番。</p>
+        <li>
+          <figure><img src="assets/photos/food/food-22.jpg" alt="レタスを添えた蒸したて小籠包" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>蒸し小籠包</h3><p>蒸籠で仕上げる、あつあつの小籠包。あと一品ほしいときに。</p></div>
         </li>
-        <li class="menu-item">
-          <figure><img src="assets/img/photos/menu-salad.jpg" alt="ゆで卵をのせたポテトサラダや唐揚げなどの一品料理" width="760" height="570" loading="lazy"></figure>
-          <h3>サラダ・一品料理</h3>
-          <p>ポテトサラダ、唐揚げ、ソーセージなど。もう一品ほしいときに。</p>
-        </li>
-        <li class="menu-item">
-          <figure><img src="assets/img/photos/menu-sweets.jpg" alt="ガトーショコラとシフォンケーキにアイスを添えた手づくりスイーツ" width="760" height="570" loading="lazy"></figure>
-          <h3>手づくりスイーツ</h3>
-          <p>ガトーショコラやシフォンケーキなど、日替わりの焼き菓子をアイスとともに。</p>
+        <li>
+          <figure><img src="assets/photos/food/food-05.jpg" alt="粉糖をふったガトーショコラとシフォンケーキにアイスを添えたスイーツ" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>手づくりスイーツ</h3><p>ガトーショコラやシフォンケーキを、アイスとともに。日替わりでご用意。</p></div>
         </li>
       </ul>
 
-      <p class="menu-drinks">
-        <span>こだわりのコーヒー・紅茶</span>
-        <span>ソフトクリーム — セットに +&yen;330（税込）で追加</span>
-        <span>お子さまドリンクあり</span>
-      </p>
-
-      <div class="menu-times">
-        <div>
-          <h3>ランチ</h3>
-          <p class="price">〜 &yen;999</p>
-          <p class="hours">木〜日・祝 11:00–15:00<br><span>L.O. 料理14:30 / ドリンク14:45</span></p>
+      <div class="menu-foot">
+        <div class="pills">
+          <span>こだわりのコーヒー・紅茶</span>
+          <span>お子さまメニューあり</span>
+          <span>Uber Eats でおうちでも</span>
         </div>
-        <div>
-          <h3>お子さま</h3>
-          <p class="price">Family</p>
-          <p class="hours">ひよこカレーはお子さまに人気<br><span>ベビーカー・車椅子のまま入店可</span></p>
-        </div>
-        <div>
-          <h3>貸切</h3>
-          <p class="price">〜 20名</p>
-          <p class="hours">着席18名 / 立食25名まで<br><span>ご相談は 090-4256-7353 へ</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ INFO ============ -->
-  <section class="section info" id="info">
-    <div class="wrap">
-      <header class="section-head">
-        <p class="section-label">Information</p>
-        <h2 class="section-title">店舗情報</h2>
-      </header>
-
-      <div class="info-cols">
-        <table class="info-table">
-          <caption class="sr-only">基本情報</caption>
-          <tbody>
-            <tr><th scope="row">店名</th><td>Café Le Pont（るぽん）</td></tr>
-            <tr><th scope="row">住所</th><td>福島県白河市向新蔵50番地</td></tr>
-            <tr><th scope="row">電話</th><td><a href="tel:09042567353">090-4256-7353</a></td></tr>
-            <tr>
-              <th scope="row">営業時間</th>
-              <td>
-                <b>ランチ</b> 木・金・土・日・祝 11:00–15:00<br>
-                <span class="sub">L.O. 料理14:30 / ドリンク14:45</span>
-              </td>
-            </tr>
-            <tr><th scope="row">定休日</th><td>月曜・火曜・水曜</td></tr>
-            <tr><th scope="row">席数</th><td>18席（カウンター6席 / テーブル12席）</td></tr>
-            <tr><th scope="row">貸切</th><td>可（20名以下）／ 着席18名・立食25名まで</td></tr>
-          </tbody>
-        </table>
-
-        <table class="info-table">
-          <caption class="sr-only">設備・お支払い</caption>
-          <tbody>
-            <tr><th scope="row">駐車場</th><td>あり（8台）</td></tr>
-            <tr><th scope="row">設備</th><td>無料Wi-Fi / 電源あり / ベビーカー・車椅子で入店可</td></tr>
-            <tr><th scope="row">お子さま</th><td>お子さま連れ歓迎 / ひよこカレーあり</td></tr>
-            <tr><th scope="row">喫煙</th><td>全席禁煙（店外に喫煙スペースあり）</td></tr>
-            <tr>
-              <th scope="row">お支払い</th>
-              <td>
-                <b>カード</b> VISA / Master / JCB<br>
-                <b>電子マネー</b> 交通系（Suica等）/ nanaco / WAON / iD / QUICPay
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">SNS</th>
-              <td><a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram @rupon_208</a></td>
-            </tr>
-          </tbody>
-        </table>
+        <p>ランチタイム 11:00–15:00（木・金・土・日・祝）</p>
       </div>
     </div>
   </section>
@@ -374,25 +434,31 @@
   <section class="section access" id="access">
     <div class="wrap">
       <header class="section-head">
-        <p class="section-label">Access</p>
-        <h2 class="section-title">アクセス</h2>
+        <p class="section-label">Access &amp; Info</p>
+        <h2 class="section-title">アクセス・店舗情報</h2>
+        <p class="section-sub">Comment venir</p>
       </header>
-
-      <div class="access-cols">
-        <div class="access-text">
-          <p class="address">福島県白河市向新蔵50番地</p>
-          <ul class="route">
-            <li><span>電車</span>JR白河駅より徒歩10分（約505m）</li>
-            <li><span>徒歩</span>白河市役所より徒歩5分</li>
-            <li><span>お車</span>専用駐車場8台あり</li>
-          </ul>
-          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E7%99%BD%E6%B2%B3%E5%B8%82%E5%90%91%E6%96%B0%E8%94%B550" target="_blank" rel="noopener">Googleマップで開く</a>
-        </div>
-        <div class="access-map">
-          <iframe
-            title="Café Le Pont の地図"
-            src="https://maps.google.com/maps?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E7%99%BD%E6%B2%B3%E5%B8%82%E5%90%91%E6%96%B0%E8%94%B550&amp;hl=ja&amp;z=16&amp;output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="access-grid">
+        <figure class="access-photo">
+          <img src="assets/img/store/store-exterior-2.jpg" alt="カフェ るぽんの外観。グレーの建物とウッド格子、専用駐車場" width="1477" height="1108" loading="lazy">
+        </figure>
+        <div>
+          <table class="info-table">
+            <tbody>
+              <tr><th>店名</th><td>Café Le Pont（カフェ るぽん）</td></tr>
+              <tr><th>住所</th><td>福島県白河市向新蔵50番地</td></tr>
+              <tr><th>電話</th><td><a href="tel:09042567353">090-4256-7353</a></td></tr>
+              <tr><th>営業時間</th><td>11:00–15:00（木・金・土・日・祝）</td></tr>
+              <tr><th>定休日</th><td>月・火・水</td></tr>
+              <tr><th>駐車場</th><td>あり（店舗前）</td></tr>
+              <tr><th>デリバリー</th><td>Uber Eats 対応</td></tr>
+              <tr><th>SNS</th><td><a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram @rupon_208</a></td></tr>
+            </tbody>
+          </table>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E7%99%BD%E6%B2%B3%E5%B8%82%E5%90%91%E6%96%B0%E8%94%B550" target="_blank" rel="noopener">Googleマップで開く</a>
+          <div class="map">
+            <iframe title="Café Le Pont の地図" src="https://maps.google.com/maps?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E7%99%BD%E6%B2%B3%E5%B8%82%E5%90%91%E6%96%B0%E8%94%B550&amp;hl=ja&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </div>
@@ -401,12 +467,9 @@
   <!-- ============ CTA ============ -->
   <section class="cta">
     <div class="wrap narrow">
-      <p class="cta-fr"><em>&Agrave; bient&ocirc;t chez Le Pont.</em></p>
-      <h2>家族みんなで、お待ちしています。</h2>
-      <p class="cta-text">
-        貸切やお子さま連れのご相談は、お電話にて承ります。<br>
-        日々のメニューや営業のお知らせは Instagram で発信しています。
-      </p>
+      <p class="fr"><em>À bientôt chez Le Pont.</em></p>
+      <h2>赤いベンチで、お待ちしています。</h2>
+      <p>ご予約・お問い合わせはお電話で。日々のメニューや営業のお知らせは Instagram で発信しています。</p>
       <div class="hero-actions">
         <a class="btn btn-light" href="tel:09042567353">090-4256-7353 に電話する</a>
         <a class="btn btn-outline" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">@rupon_208</a>
@@ -417,29 +480,27 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <img src="assets/img/logo-light.png" alt="Café Le Pont" width="900" height="716">
-      <p>福島県白河市向新蔵50番地 &middot; TEL 090-4256-7353</p>
-    </div>
+  <div class="wrap">
+    <img src="assets/img/logo-white.png" alt="Café Le Pont">
+    <p>福島県白河市向新蔵50番地 &middot; TEL 090-4256-7353</p>
     <nav class="footer-nav" aria-label="フッターメニュー">
-      <a href="#concept">コンセプト</a>
-      <a href="#promise">お約束</a>
+      <a href="#about">お店について</a>
+      <a href="#interior">店内</a>
+      <a href="#terrace">テラス・ベンチ</a>
       <a href="#menu">メニュー</a>
-      <a href="#info">店舗情報</a>
       <a href="#access">アクセス</a>
       <a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram</a>
     </nav>
+    <p class="footer-tag">Le Pont &mdash; 橋がつなぐ、まちのカフェ</p>
   </div>
-  <p class="footer-tagline">Le Pont &nbsp;家族の「おいしいね」を、まんなかで 〜</p>
 </footer>
 
-<div class="mobile-callbar" aria-label="電話・SNS">
-  <a class="mc-tel" href="tel:09042567353">
+<div class="callbar" aria-label="電話・SNS">
+  <a class="cb-tel" href="tel:09042567353">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
     電話する
   </a>
-  <a class="mc-ig" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">
+  <a class="cb-ig" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
     Instagram
   </a>
