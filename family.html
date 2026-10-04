@@ -513,6 +513,24 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 </div>
 
 <script>
+/* リロード時に前回のスクロール位置へ復元させない（遅延画像でズレて変な位置に飛ぶのを防止）。
+   リロードは必ず先頭(ホーム)から。通常訪問で #section 指定があるときはその位置を尊重 */
+if('scrollRestoration' in history){ try{ history.scrollRestoration='manual'; }catch(e){} }
+window.addEventListener('load',function(){
+  var isReload=false;
+  try{
+    var nav=performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if(nav){ isReload = nav.type==='reload'; }
+    else if(performance.navigation){ isReload = performance.navigation.type===1; }
+  }catch(e){}
+  if(isReload){
+    if(location.hash){ try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){} }
+    window.scrollTo(0,0);
+  }else if(!location.hash){
+    window.scrollTo(0,0);
+  }
+});
+
 /* メニュー動画: 画面内に入ったら再生（autoplayによる読み込み時スクロール飛びを回避） */
 (function(){
   var v=document.querySelector('.menu-clip video');
